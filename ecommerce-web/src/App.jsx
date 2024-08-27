@@ -10,6 +10,12 @@ import Subscribe from "./components/Subscribe/Subscribe";
 import Testimonials from "./components/Testimonial/Testimonials";
 import Footer from "./components/Footer/Footer";
 import Popup from "./components/Popup/Popup";
+import Contact_us from "./components/ContactUs/Contact_us";
+import AboutUs from "./components/AboutUs/AboutUs";
+import Layout from "./components/Layout/Layout";
+import HomeLayout from "./components/Layout/HomeLayout";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import ProductsPage from "./components/ProductsPage/ProductsPage";
 
 const App = () => {
   const [orderPopup, setOrderPopup] = React.useState(false);
@@ -29,18 +35,19 @@ const App = () => {
   }, []);
 
   return (
-    <div className="bg-white dark:bg-gray-900 dark:text-white duration-200">
-      <Navbar handleOrderPopup={handleOrderPopup} />
-      <Hero handleOrderPopup={handleOrderPopup} />
-      <Products />
-      <TopProducts handleOrderPopup={handleOrderPopup} />
-      <Banner />
-      <Subscribe />
-      <Products />
-      <Testimonials />
-      <Footer />
-      <Popup orderPopup={orderPopup} setOrderPopup={setOrderPopup} />
-    </div>
+    <BrowserRouter>
+      <div className="bg-white dark:bg-gray-900 dark:text-white duration-200">
+        <Navbar handleOrderPopup={handleOrderPopup} />
+        <Routes>
+          <Route path="/" element={<HomeLayout />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/contact" element={<Contact_us />} />
+          <Route path="/products" element={<ProductsPage />} />
+        </Routes>
+        <Footer />
+        <Popup orderPopup={orderPopup} setOrderPopup={setOrderPopup} />
+      </div>
+    </BrowserRouter>
   );
 };
 

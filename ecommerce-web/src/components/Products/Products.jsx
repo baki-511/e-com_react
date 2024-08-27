@@ -6,7 +6,6 @@ import Img3 from "../../assets/women/women3.jpg";
 import Img4 from "../../assets/women/women4.jpg";
 import { FaStar } from "react-icons/fa6";
 
-
 const ProductsData = [
   {
     id: 1,
@@ -56,8 +55,12 @@ const Products = () => {
       <div className="container">
         {/* Header Section  */}
         <div className="text-center mb-10 max-w-[600px] mx-auto">
-          <p data-aos="fade-up" className="text-sm text-primary">Top Selling Products for you</p>
-          <h1 data-aos="fade-up" className="text-3xl font-bold">Products</h1>
+          <p data-aos="fade-up" className="text-sm text-primary">
+            Top Selling Products for you
+          </p>
+          <h1 data-aos="fade-up" className="text-3xl font-bold">
+            Products
+          </h1>
           <p data-aos="fade-up" className="text-xs text-gray-400">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt quis
             libero pariatur.
@@ -92,7 +95,9 @@ const Products = () => {
           </div>
           {/* View All Buttons  */}
           <div className="flex justify-center">
-            <button className="text-center mt-10 cursor-pointer bg-primary text-white py-1 px-5 rounded-md">View All Products</button>
+            <button className="text-center mt-10 cursor-pointer bg-primary text-white py-1 px-5 rounded-md">
+              View All Products
+            </button>
           </div>
         </div>
       </div>
