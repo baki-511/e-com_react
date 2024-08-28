@@ -5,6 +5,7 @@ const AboutUs = () => {
     
     <div>
       <div
+        data-aos="fade-up"
         className="flex justify-center"
         style={{
           background:
